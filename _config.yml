@@ -1,0 +1,6 @@
+title: Dip Soft Studios
+description: Independent software studio in India creating practical apps.
+url: "https://dipsoftstudios.github.io"
+baseurl: ""
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
