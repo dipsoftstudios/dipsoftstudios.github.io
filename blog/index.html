@@ -1,0 +1,25 @@
+---
+layout: default
+title: Blog
+description: Updates, practical guides, and notes from Dip Soft Studios.
+permalink: /blog/
+---
+<section class="page-hero wrap blog-hero">
+  <p class="eyebrow"><i></i> FROM THE STUDIO</p>
+  <h1>Notes from<br><span>the studio.</span></h1>
+  <p>Product updates, practical guides, and occasional notes about the apps we make.</p>
+</section>
+<section class="section wrap blog-index">
+  <div class="blog-list-heading"><span>ARTICLES</span><span>{{ site.posts | size }} POSTS</span></div>
+  {% for post in site.posts %}
+  <article class="blog-card">
+    <div class="blog-card-date">{{ post.date | date: "%b %d, %Y" }}</div>
+    <div class="blog-card-copy">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+      <p>{{ post.description | default: post.excerpt | strip_html | normalize_whitespace | truncate: 190 }}</p>
+      <a class="text-link" href="{{ post.url | relative_url }}">Read article <span>→</span></a>
+    </div>
+    <span class="blog-card-arrow" aria-hidden="true">↗</span>
+  </article>
+  {% endfor %}
+</section>
