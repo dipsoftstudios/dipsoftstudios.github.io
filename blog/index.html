@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Blog
-description: Updates, practical guides, and notes from Dip Soft Studios.
+description: Thoughtful writing on the technology shaping our everyday lives.
 permalink: /blog/
 ---
 <section class="page-hero wrap blog-hero">
-  <p class="eyebrow"><i></i> FROM THE STUDIO</p>
-  <h1>Notes from<br><span>the studio.</span></h1>
-  <p>Product updates, practical guides, and occasional notes about the apps we make.</p>
+  <p class="eyebrow"><i></i> TECHNOLOGY BLOG</p>
+  <h1>Technology,<br><span>in focus.</span></h1>
+  <p>Thoughtful writing on the technology shaping our everyday lives.</p>
 </section>
 <section class="section wrap blog-index">
   <div class="blog-list-heading"><span>ARTICLES</span><span>{{ site.posts | size }} POSTS</span></div>
@@ -21,5 +21,7 @@ permalink: /blog/
     </div>
     <span class="blog-card-arrow" aria-hidden="true">↗</span>
   </article>
+  {% else %}
+  <p class="blog-empty">No articles yet. New articles will appear here.</p>
   {% endfor %}
 </section>

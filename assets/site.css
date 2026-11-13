@@ -42,6 +42,7 @@
 .blog-card-copy>p{max-width:660px;margin:0 0 13px;color:var(--muted);font-size:12px;line-height:1.8}
 .blog-card .text-link{font-size:11px}
 .blog-card-arrow{justify-self:end;color:var(--red);font-size:19px}
+.blog-empty{margin:0;padding:30px 8px;border-bottom:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.8}
 .blog-post{padding-block:47px 100px}
 .blog-back{display:inline-block;margin-bottom:38px;color:var(--muted);font-size:12px;text-decoration:none}
 .blog-back:hover{color:var(--red)}
@@ -59,8 +60,11 @@
 .contact-form-panel,.contact-sidebar{border:1px solid var(--line);border-radius:20px;background:#fff}
 .contact-form-panel{padding:clamp(23px,4vw,38px)}
 .contact-form-panel>.eyebrow{margin-bottom:22px}
-#contact-form{display:grid;gap:9px}
-#contact-form label{margin-top:7px;color:#4e4a4e;font-size:11px;font-weight:650}
+#contact-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 17px}
+#contact-form .contact-form-row{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+#contact-form .contact-form-field{display:grid;min-width:0;gap:7px}
+#contact-form .contact-form-full,#contact-form .contact-form-note,#contact-form button,#contact-form .form-status{grid-column:1/-1}
+#contact-form label{margin:0;color:#4e4a4e;font-size:11px;font-weight:650}
 #contact-form input:not([type=hidden]):not([type=submit]),#contact-form select,#contact-form textarea{width:100%;min-height:46px;padding:12px 13px;border:1px solid #ded8d5;border-radius:10px;background:#fff;color:var(--ink);font:inherit;font-size:13px;outline:none;transition:border-color .18s ease,box-shadow .18s ease}
 #contact-form textarea{min-height:150px;resize:vertical}
 #contact-form input:focus,#contact-form select:focus,#contact-form textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(216,41,62,.1)}
@@ -95,4 +99,4 @@
 .story-prompt>p:not(.eyebrow){max-width:500px;margin:0 0 15px;color:var(--muted);font-size:13px;line-height:1.8}
 
 @media(max-width:800px){.contact-layout,.story-content{grid-template-columns:1fr}.contact-sidebar{max-width:none}.story-note{position:static;min-height:185px}.blog-card{grid-template-columns:100px minmax(0,1fr) 24px;gap:15px}}
-@media(max-width:560px){.featured-app-icon{width:66px;height:66px;border-radius:21px}.listing-app-icon{width:82px;height:82px;border-radius:26px}.app-description>div p{font-size:11px!important}.blog-hero{padding-bottom:32px}.blog-card{grid-template-columns:1fr 24px;gap:7px 12px;padding:22px 4px}.blog-card-date{grid-column:1/-1;padding:0}.blog-card-copy{grid-column:1}.blog-card-arrow{grid-column:2;grid-row:2}.blog-post{padding-block:35px 70px}.blog-back{margin-bottom:28px}.blog-post-header h1{font-size:43px}.blog-post-header>p:last-child{font-size:13px}.blog-prose{font-size:14px}.contact-layout{gap:14px}.contact-form-panel,.contact-sidebar{padding:21px}.story-content{gap:27px}.story-actions{gap:15px}.story-note{min-height:160px}}
+@media(max-width:560px){.featured-app-icon{width:66px;height:66px;border-radius:21px}.listing-app-icon{width:82px;height:82px;border-radius:26px}.app-description>div p{font-size:11px!important}.blog-hero{padding-bottom:32px}.blog-card{grid-template-columns:1fr 24px;gap:7px 12px;padding:22px 4px}.blog-card-date{grid-column:1/-1;padding:0}.blog-card-copy{grid-column:1}.blog-card-arrow{grid-column:2;grid-row:2}.blog-post{padding-block:35px 70px}.blog-back{margin-bottom:28px}.blog-post-header h1{font-size:43px}.blog-post-header>p:last-child{font-size:13px}.blog-prose{font-size:14px}.contact-layout{gap:14px}.contact-form-panel,.contact-sidebar{padding:21px}#contact-form .contact-form-row{grid-template-columns:1fr;gap:15px}.story-content{gap:27px}.story-actions{gap:15px}.story-note{min-height:160px}}
