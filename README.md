@@ -7,8 +7,8 @@ A responsive studio website built with HTML, CSS, and JavaScript. Jekyll builds 
 - `index.html` — studio home and featured app
 - `about.html` and `story.html` — studio information and the reason behind the studio
 - `apps.html` — app directory with the PataHive app listing and expandable details
-- `support.html` — international support and the planned India option
-- `contact.html` — contact form and public support contact
+- `support.html` — international support and India support through Razorpay
+- `contact.html` — contact form for support, privacy, and payment questions
 - `blog/index.html` — generated article list
 - `patahive-privacy.html`, `privacy.html`, `terms.html`, `refunds.html`, and `delivery.html` — app and website policies
 - `404.html` — not-found page
@@ -39,7 +39,7 @@ Jekyll leaves the existing hand-written HTML pages in place and processes the Ma
 
 ## Contact form
 
-The contact form uses FormSubmit to forward messages to the studio inbox. Before the form can deliver messages, submit it once from the deployed website and confirm the activation email sent to the studio. After activation, new submissions are forwarded by the service. The contact page also provides the public email fallback needed for support and merchant contact checks. FormSubmit processes submitted names, reply addresses, topics, and messages; see `privacy.html` before changing the form provider or fields.
+The contact form uses FormSubmit to forward messages to the studio inbox. The destination is configured in both `contact.html` and `assets/site.js`; because this is a public static site, those source files are public. FormSubmit offers a generated email link if you want to avoid exposing the inbox address in the source. After the first submission, click FormSubmit’s activation link in the studio inbox. The page reports the provider’s response when a submission fails. FormSubmit processes submitted names, reply addresses, topics, and messages; see `privacy.html` before changing the form provider or fields.
 
 ## Host on GitHub Pages
 
@@ -56,11 +56,10 @@ Add another app article/card to `apps.html`, provide its real app icon in `asset
 
 ## Before public launch
 
-- Check all page text, contact routes, policy statements, and the live contact form.
-- The India support option is labelled as planned until its payment setup is active.
-- The current international contribution link opens an external provider; confirm its destination before publishing changes.
+- Check all page text, contact routes, policy statements, and the live contact form; verify FormSubmit activation in the studio inbox.
+- The international contribution link opens Ko-fi; the India contribution button loads Razorpay’s payment-button script. Confirm both destinations and payment-button status before publishing changes.
 - For Google Play, set the required support email in Play Console and link the public PataHive privacy policy. Keep the privacy policy and Data safety declarations aligned with the current app.
-- Before enabling India-based payments, verify the merchant contact, business, cancellation, refund, and privacy details against the payment provider’s current requirements.
+- Before publishing payment options, verify the merchant contact, business, cancellation, refund, and privacy details against the payment provider’s current requirements.
 
 ## Publisher
 

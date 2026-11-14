@@ -100,3 +100,5 @@
 
 @media(max-width:800px){.contact-layout,.story-content{grid-template-columns:1fr}.contact-sidebar{max-width:none}.story-note{position:static;min-height:185px}.blog-card{grid-template-columns:100px minmax(0,1fr) 24px;gap:15px}}
 @media(max-width:560px){.featured-app-icon{width:66px;height:66px;border-radius:21px}.listing-app-icon{width:82px;height:82px;border-radius:26px}.app-description>div p{font-size:11px!important}.blog-hero{padding-bottom:32px}.blog-card{grid-template-columns:1fr 24px;gap:7px 12px;padding:22px 4px}.blog-card-date{grid-column:1/-1;padding:0}.blog-card-copy{grid-column:1}.blog-card-arrow{grid-column:2;grid-row:2}.blog-post{padding-block:35px 70px}.blog-back{margin-bottom:28px}.blog-post-header h1{font-size:43px}.blog-post-header>p:last-child{font-size:13px}.blog-prose{font-size:14px}.contact-layout{gap:14px}.contact-form-panel,.contact-sidebar{padding:21px}#contact-form .contact-form-row{grid-template-columns:1fr;gap:15px}.story-content{gap:27px}.story-actions{gap:15px}.story-note{min-height:160px}}
+
+.razorpay-support-form{margin-top:16px}

@@ -57,13 +57,20 @@
           headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify(Object.fromEntries(new FormData(contactForm)))
         });
-        const result = await response.json();
-        if (!response.ok || result.success === false || result.success === "false") throw new Error("The message could not be sent.");
+        let result;
+        try {
+          result = await response.json();
+        } catch (_parseError) {
+          throw new Error("The form service returned an unreadable response. Please try again later.");
+        }
+        if (!response.ok || String(result.success) !== "true") {
+          throw new Error(typeof result.message === "string" && result.message.trim() ? result.message : "The form service did not accept the message.");
+        }
         contactForm.reset();
         status.textContent = "Thanks — your message has been sent to the studio.";
         status.classList.add("success");
-      } catch (_error) {
-        status.textContent = "We couldn’t send that just now. Please try again or use the email address shown on this page.";
+      } catch (error) {
+        status.textContent = error instanceof Error && error.message ? "We couldn’t send that just now. " + error.message : "We couldn’t send that just now. Check your connection and try again.";
         status.classList.add("error");
       } finally {
         submitButton.disabled = false;
