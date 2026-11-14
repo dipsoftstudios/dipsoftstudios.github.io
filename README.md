@@ -39,7 +39,7 @@ Jekyll leaves the existing hand-written HTML pages in place and processes the Ma
 
 ## Contact form
 
-The contact form uses FormSubmit to forward messages to the studio inbox. The destination is configured in both `contact.html` and `assets/site.js`; because this is a public static site, those source files are public. FormSubmit offers a generated email link if you want to avoid exposing the inbox address in the source. After the first submission, click FormSubmit’s activation link in the studio inbox. The page reports the provider’s response when a submission fails. FormSubmit processes submitted names, reply addresses, topics, and messages; see `privacy.html` before changing the form provider or fields.
+The contact form uses a normal HTML POST to FormSubmit, which forwards messages to `help@dipsoftstudios.com`. The address is intentionally visible on the Contact page and in the public form action. After changing the destination, click FormSubmit’s one-time activation link delivered to that inbox (the Spaceship forwarding rule should route it to Gmail). FormSubmit processes submitted names, reply addresses, topics, and messages; see `privacy.html` before changing the form provider or fields.
 
 ## Host on GitHub Pages
 
@@ -56,7 +56,7 @@ Add another app article/card to `apps.html`, provide its real app icon in `asset
 
 ## Before public launch
 
-- Check all page text, contact routes, policy statements, and the live contact form; verify FormSubmit activation in the studio inbox.
+- Check all page text, contact routes, policy statements, and the live contact form; verify the FormSubmit activation link in the `help@dipsoftstudios.com` inbox.
 - The international contribution link opens Ko-fi; the India contribution button loads Razorpay’s payment-button script. Confirm both destinations and payment-button status before publishing changes.
 - For Google Play, set the required support email in Play Console and link the public PataHive privacy policy. Keep the privacy policy and Data safety declarations aligned with the current app.
 - Before publishing payment options, verify the merchant contact, business, cancellation, refund, and privacy details against the payment provider’s current requirements.

@@ -102,3 +102,7 @@
 @media(max-width:560px){.featured-app-icon{width:66px;height:66px;border-radius:21px}.listing-app-icon{width:82px;height:82px;border-radius:26px}.app-description>div p{font-size:11px!important}.blog-hero{padding-bottom:32px}.blog-card{grid-template-columns:1fr 24px;gap:7px 12px;padding:22px 4px}.blog-card-date{grid-column:1/-1;padding:0}.blog-card-copy{grid-column:1}.blog-card-arrow{grid-column:2;grid-row:2}.blog-post{padding-block:35px 70px}.blog-back{margin-bottom:28px}.blog-post-header h1{font-size:43px}.blog-post-header>p:last-child{font-size:13px}.blog-prose{font-size:14px}.contact-layout{gap:14px}.contact-form-panel,.contact-sidebar{padding:21px}#contact-form .contact-form-row{grid-template-columns:1fr;gap:15px}.story-content{gap:27px}.story-actions{gap:15px}.story-note{min-height:160px}}
 
 .razorpay-support-form{margin-top:16px}
+.support-card[id="india-support"]{scroll-margin-top:24px}
+.contact-email-link{color:var(--red-dark);font-weight:650;text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}
+.primary-nav .nav-cta{white-space:nowrap}
+@media(min-width:801px) and (max-width:940px){.primary-nav{gap:10px}.primary-nav a{font-size:11px}.primary-nav .nav-cta{padding:10px 11px;font-size:10px}}
